@@ -1,0 +1,83 @@
+<h2 mat-dialog-title>{{ vehicule.idvehicule ? 'Modifier' : 'Ajouter' }} un véhicule</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Numéro de parc</mat-label>
+    <input matInput [(ngModel)]="vehicule.numparc" name="numparc" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Immatricule</mat-label>
+    <input matInput [(ngModel)]="vehicule.immatricule">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Modèle</mat-label>
+    <input matInput [(ngModel)]="vehicule.modele">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Année</mat-label>
+    <input matInput type="number" [(ngModel)]="vehicule.annee">
+  </mat-form-field>
+
+  <!--<mat-form-field>
+    <mat-label>État</mat-label>
+    <input matInput [(ngModel)]="vehicule.etat" name="etat" required>
+  </mat-form-field>-->
+
+  <mat-form-field>
+    <mat-label>État</mat-label>
+    <mat-select [(ngModel)]="vehicule.etat" name="etat" required>
+      <mat-option value="en_service">En service</mat-option>
+      <mat-option value="en_panne">En panne</mat-option>
+      <mat-option value="en_maintenance">En maintenance</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Annuler</button>
+  <button mat-button color="primary" (click)="saveVehicule()">Enregistrer</button>
+</mat-dialog-actions>
+
+
+
+
+
+
+
+
+<!--<h2 mat-dialog-title>Ajouter un Véhicule</h2>
+<mat-dialog-content>
+  <form #vehiculeForm="ngForm">
+    <mat-form-field>
+      <mat-label>N° Parc</mat-label>
+      <input matInput [(ngModel)]="vehicule.numparc" name="numparc" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Immatricule</mat-label>
+      <input matInput [(ngModel)]="vehicule.immatricule" name="immatricule" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Modèle</mat-label>
+      <input matInput [(ngModel)]="vehicule.modele" name="modele" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Année</mat-label>
+      <input matInput type="number" [(ngModel)]="vehicule.annee" name="annee" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>État</mat-label>
+      <input matInput [(ngModel)]="vehicule.etat" name="etat" required>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button [mat-dialog-close]="vehicule" cdkFocusInitial>Enregistrer</button>
+</mat-dialog-actions>-->

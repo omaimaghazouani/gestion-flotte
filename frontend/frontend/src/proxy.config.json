@@ -1,0 +1,14 @@
+{
+    "/vehicules":{
+        "target":"http://localhost:3005",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/admin":{
+        "target":"http://localhost:3005",
+        "secure": false,
+        "changeOrigin": true
+    }
+}
+
+
